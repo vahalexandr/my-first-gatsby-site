@@ -1,28 +1,24 @@
 import * as React from 'react'
 import {Link} from "gatsby";
 import Greeting from "../components/greeting";
+import {StaticImage} from "gatsby-plugin-image";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const Filialy = (props) => {
     return(
         <>
-            <h1>Филиалы</h1>
-            <Link to="/">Main</Link>
-            <p>Тут будут филиалы</p>
-
-
-            <div>
-                <Greeting name="Megan"/>
-                <Greeting name="Obinna"/>
-            </div>
+            <Layout pageTitle ="Филиалы">
+                <p>Города где мы работаем</p>
+                <StaticImage
+                    alt="Our towns"
+                    src="../images/towns.jpeg"
+                />
+            </Layout>
         </>
     )
 }
 
-export const Head = () => (
-    <>
-        <title>Филиалы</title>
-        <meta name ="" content=""/>
-    </>
-)
+export const Head = () => <Seo title="Филиалы"/>
 
 export default Filialy

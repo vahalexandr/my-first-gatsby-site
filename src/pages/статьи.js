@@ -1,21 +1,23 @@
 import * as React from 'react'
 import {Link} from "gatsby";
+import {StaticImage} from "gatsby-plugin-image";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const Stati = (props) => {
     return(
         <>
-            <h1>Статьи</h1>
-            <Link to="/">Main</Link>
-            <p>Тут будут статьи</p>
+            <Layout pageTitle ="Статьи">
+                <p>Все статьи тут</p>
+                <StaticImage
+                    alt="Articles"
+                    src="../images/stati.jpg"
+                />
+            </Layout>
         </>
     )
 }
 
-export const Head = () => (
-    <>
-    <title>Статьи</title>
-    <meta name ="Статьи о логопедии" content="логопед дефектолог советы"/>
-    </>
-)
+export const Head = () => <Seo title = "Статьи"/>
 
 export default Stati
